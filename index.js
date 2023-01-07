@@ -101,12 +101,20 @@ app.use((error, req, res, next) => {
   res.json({ message: error.message || 'An unknown error occurred!' });
 });
 
+/* 
 
+Site dubara se host krte waqt yaha pr changes krna ha.
+.env file bana kr waha pr database ka password username store hoga
+and frr gitignore.
+
+
+
+*/
 
 
 mongoose
   .connect(
-    'mongodb+srv://Adityakumar:India!123@merncluster0.xfudixz.mongodb.net/?retryWrites=true&w=majority',
+    'mongodb+srv://{username}:{pwd}@merncluster0.xfudixz.mongodb.net/?retryWrites=true&w=majority',
     { useCreateIndex: true, useUnifiedTopology: true, useNewUrlParser: true },
   )
   .then(() => app.listen(process.env.PORT || 5000, console.log("Your server is up man.....")))
