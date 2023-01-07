@@ -108,13 +108,14 @@ Site dubara se host krte waqt yaha pr changes krna ha.
 and frr gitignore.
 
 
+pwd most common waala :)
 
 */
 
 
 mongoose
   .connect(
-    'mongodb+srv://{username}:{pwd}@merncluster0.xfudixz.mongodb.net/?retryWrites=true&w=majority',
+    'mongodb+srv://{Adityakumar}:{pwd}@merncluster0.xfudixz.mongodb.net/?retryWrites=true&w=majority',
     { useCreateIndex: true, useUnifiedTopology: true, useNewUrlParser: true },
   )
   .then(() => app.listen(process.env.PORT || 5000, console.log("Your server is up man.....")))
